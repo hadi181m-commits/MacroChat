@@ -1,5 +1,5 @@
 // Offline support: keep the app files on the phone, refresh them when online.
-const CACHE = 'macrochat-v5-14';
+const CACHE = 'macrochat-v5-15';
 const FILES = ['./', './index.html', './manifest.webmanifest', './icon-192.png', './icon-512.png', './apple-touch-icon.png'];
 self.addEventListener('install', (e) => {
   e.waitUntil(caches.open(CACHE).then((c) => c.addAll(FILES)).then(() => self.skipWaiting()));
